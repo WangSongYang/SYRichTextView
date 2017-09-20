@@ -1,0 +1,40 @@
+//
+//  PrefixHeader.pch
+//  iOSPro
+//
+//  Created by 王颂阳 on 2017/6/26.
+//  Copyright © 2017年 王颂阳. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "AFNetworking.h"
+//#import <UMMobClick/MobClick.h>
+#import "Masonry.h"
+#import "AppDelegate.h"
+#import "UIColor+HexColor.h"
+#import "JZNavigationExtension.h"
+
+
+// SystemVersion
+#define iOS9  ([[UIDevice currentDevice].systemVersion floatValue]>=9.0)
+#define iOS10 ([[UIDevice currentDevice].systemVersion floatValue]>=10.0)
+
+// Phone
+#define iPhone5 CGSizeEqualToSize([UIScreen mainScreen].bounds.size, CGSizeMake(320, 568))
+
+
+//Screen
+#define SCREEN_WIDTH        ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT       ([UIScreen mainScreen].bounds.size.height)
+#define SCREEN_SCALE        ([UIScreen mainScreen].scale)
+
+
+//Font
+#define KSystemFont(x) [UIFont systemFontOfSize:(x)]
+
+#endif /* PrefixHeader_pch */
